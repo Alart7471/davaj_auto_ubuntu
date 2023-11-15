@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Davaj Davaj Garage</title>
+  <link rel="stylesheet" href="ap.css">
+</head>
+<body>
+  <div id="app">
+  <header>
+    <p style="text-align: center;letter-spacing: 1mm;font-size: xx-large; font-weight: bold;">{{welcome[choosedLang]}}</p>
+  </header>
+  <div id="language">
+    <div class="language-selector">
+      <span id="language">{{currentLanguage}}</span>
+    </div>
+  </div>
+  <div class="in_dev">
+    <a href="/">{{href1[choosedLang]}}</a>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <button @click="routeToMain" class="pages-btn">{{href1[choosedLang]}}</button>
+  </div>
+
+  <div class="about-section">
+    <h2>{{about_h[choosedLang]}}</h2>
+    <p>{{about_sec[choosedLang]}} - <span><a href="https://t.me/Autostrucnjak">@Autostrucnjak</a></span>
+    </p>
+  </div>
+  
+  <div class="in_dev">
+  <p style="color: red;">
+    #<br>
+    Добавить модальное окно, которое показывало бы
+    икноку выбранного элемента и краткое описание
+    проверки, также в окне сделать крестик и 
+    стрелочки вниз вверх 
+    (при выборе первого и последнего элемента
+    делать стрелочки дизейбл)
+    <br>#
+    </p>
+    <div class="slider">
+        <div class="slide">
+            <button class="prev-btn" @click="prevSlide">&lt;</button>
+            <button class="next-btn" @click="nextSlide">&gt;</button>
+    
+          {{items[currentSlide].image}}
+          <p>{{ items[currentSlide].caption }}</p>
+  
+        </div>
+      </div>
+  <div class="block_sections">
+    <section class="checks_about">
+        <h4 style="padding-top: 5px;">Мы проверяем</h4>
+        <div class="checks_hrefs">
+            <a href="#">Двигатель</a>
+            <br><a href="#">Приборы</a>
+            <br><a href="#">АКПП</a>
+            <br><a href="#">Кузов</a>
+            <br><a href="#">Колеса</a>
+            <br><a href="#">Амортизаторы</a>
+            <br><a href="#">Рулевое управление</a>
+            <br><a href="#">Тормоза</a>
+            <br><a href="#">Впуск</a>
+            <br><a href="#">АКБ</a>
+            <br><a href="#">Турбину</a>
+        </div>
+        <p>123</p>
+    </section>
+
+    <section class="checks">
+        section checks
+    </section>
+    
+
+
+    <section class="test_section">
+      <div class="checks__slide" style="width: 100%; display: inline-block;">                   
+        <div class="checks__slide-block">
+            <div class="checks__slide-img">
+                <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item1-icon.svg" alt="">
+            </div>
+            <div class="checks__slide-content">
+                <div class="checks__slide-title">
+                    <h3>Двигатель</h3>
+                </div>
+                <div class="checks__slide-text">
+                    <p>Проверка состояния двигателя, замер компрессии.</p>
+                </div>
+            </div>
+        </div>
+   
+                       
+        <div class="checks__slide-block">
+            <div class="checks__slide-img">
+                <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item2-icon.svg" alt="">
+            </div>
+            <div class="checks__slide-content">
+                <div class="checks__slide-title">
+                    <h3>Приборы</h3>
+                </div>
+                <div class="checks__slide-text">
+                    <p>Проверка правильной работы бортового компьютера и его показаний.</p>
+                </div>
+            </div>
+        </div>
+   
+                       
+        <div class="checks__slide-block">
+            <div class="checks__slide-img">
+                <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item3-icon.svg" alt="">
+            </div>
+            <div class="checks__slide-content">
+                <div class="checks__slide-title">
+                    <h3>АКПП</h3>
+                </div>
+                <div class="checks__slide-text">
+                    <p>Собственный алгоритм проверки АКПП. Проверка уровня жидкости и компьютерная диагностика.</p>
+                </div>
+            </div>
+        </div>
+   
+                       
+        <div class="checks__slide-block">
+            <div class="checks__slide-img">
+                <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item4-icon.svg" alt="">
+            </div>
+            <div class="checks__slide-content">
+                <div class="checks__slide-title">
+                    <h3>Кузов</h3>
+                </div>
+                <div class="checks__slide-text">
+                    <p>Проверка кузова на предмет перекраса, ремонта, снятия-установки элементов.</p>
+                </div>
+            </div>
+        </div>
+   
+                       
+        <div class="checks__slide-block">
+            <div class="checks__slide-img">
+                <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item5-icon.svg" alt="">
+            </div>
+            <div class="checks__slide-content">
+                <div class="checks__slide-title">
+                    <h3>Юр. чистоту</h3>
+                </div>
+                <div class="checks__slide-text">
+                    <p>Криминалистическая экспертиза автомобиля. Проверка в ГИБДД и Бюро кредитных историй.</p>
+                </div>
+            </div>
+        </div>
+   
+                       
+        <div class="checks__slide-block">
+            <div class="checks__slide-img">
+                <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item6-icon.svg" alt="">
+            </div>
+            <div class="checks__slide-content">
+                <div class="checks__slide-title">
+                    <h3>Колеса</h3>
+                </div>
+                <div class="checks__slide-text">
+                    <p>Равномерность износа, дата производства, состояние и марка шин - важный момент при покупке автомобиля.</p>
+                </div>
+            </div>
+        </div>
+   
+        </div>
+      <div class="checks__slide" style="width: 100%; display: inline-block;">                   
+          <div class="checks__slide-block">
+              <div class="checks__slide-img">
+                  <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item7-icon.svg" alt="">
+              </div>
+              <div class="checks__slide-content">
+                  <div class="checks__slide-title">
+                      <h3>Амортизаторы</h3>
+                  </div>
+                  <div class="checks__slide-text">
+                      <p>Это один из самых важных элементов подвески. Они напрямую влияют на управляемость автомобиля, на его устойчивость и плавность хода автомобиля.</p>
+                  </div>
+              </div>
+          </div>
+     
+                         
+          <div class="checks__slide-block">
+              <div class="checks__slide-img">
+                  <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item8-icon.svg" alt="">
+              </div>
+              <div class="checks__slide-content">
+                  <div class="checks__slide-title">
+                      <h3>Рулевое управление</h3>
+                  </div>
+                  <div class="checks__slide-text">
+                      <p>Наличие люфтов, течей, стуков в рулевом управлении. Уровень рабочей жидкости, состояние рулевой рейки и работоспособность усилителя руля.</p>
+                  </div>
+              </div>
+          </div>
+     
+                         
+          <div class="checks__slide-block">
+              <div class="checks__slide-img">
+                  <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item9-icon.svg" alt="">
+              </div>
+              <div class="checks__slide-content">
+                  <div class="checks__slide-title">
+                      <h3>Тормоза</h3>
+                  </div>
+                  <div class="checks__slide-text">
+                      <p>Проверяем состояние тормозных механизмов, дисков, колодок, антиблокировочной, антипробуксовочной систем и антизаноса.</p>
+                  </div>
+              </div>
+          </div>
+     
+                         
+          <div class="checks__slide-block">
+              <div class="checks__slide-img">
+                  <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item10-icon.svg" alt="">
+              </div>
+              <div class="checks__slide-content">
+                  <div class="checks__slide-title">
+                      <h3>Впуск</h3>
+                  </div>
+                  <div class="checks__slide-text">
+                      <p>Современные автомобили с нормами токсичности Евро 3 и выше, имеют дорогостоящие элементы в системе выхлопа, такие как нейтрализатор выхлопных газов, стоимость которого достигает 80 тыс руб.</p>
+                  </div>
+              </div>
+          </div>
+     
+                         
+          <div class="checks__slide-block">
+              <div class="checks__slide-img">
+                  <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item11-icon.svg" alt="">
+              </div>
+              <div class="checks__slide-content">
+                  <div class="checks__slide-title">
+                      <h3>АКБ</h3>
+                  </div>
+                  <div class="checks__slide-text">
+                      <p>Проверка даты выпуска, напряжения, срока службы и работоспособности.</p>
+                  </div>
+              </div>
+          </div>
+     
+                         
+          <div class="checks__slide-block">
+              <div class="checks__slide-img">
+                  <img src="https://xn----7sbecl2dbcfoo.xn--p1ai/wp-content/uploads/2020/10/item12-icon.svg" alt="">
+              </div>
+              <div class="checks__slide-content">
+                  <div class="checks__slide-title">
+                      <h3>Турбину</h3>
+                  </div>
+                  <div class="checks__slide-text">
+                      <p>Проверка состояния турбины, давления наддува, отсутствия подтеков масла.</p>
+                  </div>
+              </div>
+          </div>
+     
+        </div>
+    </section>
+  </div>
+  </div>
+
+  <div class="zayavka">
+    <h4>{{zayavka_h[choosedLang]}}</h4>
+
+    <input style="margin-bottom: 10px;" v-model="inpt.name" type="text" name="" id="" :placeholder=zayavka_name[choosedLang]>
+    <br>
+    <input style="margin-bottom: 10px;" v-model="inpt.contact" type="text" name="" id="" :placeholder=zayavka_contact[choosedLang]>
+    <br>
+    <textarea v-model="inpt.msg" style="height: 20vh; width: 80%; margin-bottom: 10px;" :placeholder="zayavka_msg[choosedLang]"></textarea>
+    <br>
+    <button @click="tryToSendReq" style="margin-bottom: 15px;" class="pages-btn">{{zayavka_btn[choosedLang]}}</button>
+</div>
+
+  <footer>
+    <p>{{footer[choosedLang]}}</p>
+  </footer>
+  </div>
+  <script type="module" src="ap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.1/axios.min.js" integrity="sha512-m9S8W3a9hhBHPFAbEIaG7J9P92dzcAWwM42VvJp5n1/M599ldK6Z2st2SfJGsX0QR4LfCVr681vyU5vW8d218w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

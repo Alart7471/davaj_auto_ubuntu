@@ -1,8 +1,8 @@
 const axios = require('axios')
 
 module.exports = { sendRequestToTelegramBot: async function(message) {
-        const botToken = '6702238393:AAFFxPI7bojjaH83ThPhU21dBS_N4kWtGQE'; // Здесь укажи токен своего бота
-        const chatId = '6357780899'; // мой сербский номер
+        const botToken = '****************************************'; // token
+        const chatId = '***************'; // my
     
         const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
         const payload = {
